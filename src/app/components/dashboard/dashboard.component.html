@@ -1,0 +1,13 @@
+<div class="center" style="margin-bottom: 5%;"> 
+    <h1 class="center-text">The three starting pokémons!</h1>
+</div>
+<div class="center-text" style="font-size: 20px;">...or search one on your own!</div>
+<div class="center" style="display: flex;">
+    <input placeholder="type a name and click 'search' " name="pokeName" [(ngModel)]="pokeName" style="width: 100%; margin: auto;">
+    <button type="button" (click)="searchPokemon(pokeName)" style="margin: 0px 10px;">Search!</button>
+</div>
+<div class="center">
+    <div *ngFor="let pokemon of displayedPokemons">
+        <app-pokeview [pokemon]="pokemon"></app-pokeview>
+    </div>
+</div>
